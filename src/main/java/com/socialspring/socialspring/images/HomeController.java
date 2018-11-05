@@ -59,7 +59,4 @@ public class HomeController {
         model.addAttribute("images", imageService.findAllImages());
         return Mono.just("index");
     }
-
-
-
 }
