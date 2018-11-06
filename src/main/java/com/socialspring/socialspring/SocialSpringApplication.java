@@ -11,9 +11,4 @@ public class SocialSpringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SocialSpringApplication.class, args);
 	}
-
-//	@Bean
-//	HiddenHttpMethodFilter hiddenHttpMethodFilter() {
-//		return new HiddenHttpMethodFilter();
-//	}
 }
