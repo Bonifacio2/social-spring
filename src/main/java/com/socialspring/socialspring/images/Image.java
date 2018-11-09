@@ -1,17 +1,18 @@
 package com.socialspring.socialspring.images;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@NoArgsConstructor
+@Document
 public class Image {
 
+    @Id
+    private final String id;
+    private final String name;
 
-    private int id;
-    private String name;
-
-    public Image(int id, String name) {
+    public Image(String id, String name) {
         this.id = id;
         this.name = name;
     }

@@ -31,7 +31,7 @@ public class ImageService {
         try {
             return Flux.fromIterable(
                     Files.newDirectoryStream(Paths.get(UPLOAD_ROOT))
-            ).map(path -> new Image(path.hashCode(), path.getFileName().toString()));
+            ).map(path -> new Image(path.toString(), path.getFileName().toString()));
         } catch (IOException e) {
             return Flux.empty();
         }
@@ -73,7 +73,7 @@ public class ImageService {
 
             FileCopyUtils.copy("Test file3",
                     new FileWriter(UPLOAD_ROOT +
-                            "/teuku.jpg"));
+                            "/huehuebr.png"));
 
         };
     }
